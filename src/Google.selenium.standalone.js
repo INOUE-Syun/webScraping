@@ -4,10 +4,8 @@ const By = webdriver.By;
 
 // chromeで起動
 const driver = new webdriver.Builder()
+  .usingServer('http://localhost:4444/wd/hub')
   .withCapabilities(webdriver.Capabilities.chrome())
-  // .withCapabilities(webdriver.Capabilities.ie())
-  // .withCapabilities(webdriver.Capabilities.opera())
-  // .withCapabilities(webdriver.Capabilities.firefox())
   .build();
 
 const $ = driver.findElement.bind(driver);
